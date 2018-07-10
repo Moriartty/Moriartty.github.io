@@ -1,0 +1,277 @@
+html,body{
+	margin:0;
+	padding: 0;
+	font-family: anticon;
+}
+div.container{
+	padding:0 14rem;
+}
+div.main{
+	float:left;
+	position:relative;
+	width: 100%;
+}
+div.left{
+	float:left;
+	position:relative;
+	width:14rem;
+	margin-left: -100%;
+	left:-14rem;
+}
+div.right{
+	float:left;
+	position:relative;
+	width:14rem;
+	margin-left: -14rem;
+	right:-14rem;
+}
+
+nav{
+	display: flex;
+	justify-content: center;
+	font-size: .8rem;
+	font-weight: bold;
+	background: #746983;
+	/*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);*/
+}
+nav a{
+	text-decoration: none;
+	color:white;
+	padding: 1rem 2.5rem;
+	background: #746983;
+}
+nav a:hover{
+	background: white;
+	color:#746983;
+}
+
+header{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	font-size: 1rem;
+	align-items: center;
+	background:#746983;
+}
+header div.moriarty{
+	margin-top: 1rem;
+}
+header div.moriarty img{
+	width: 8rem;
+	height:8rem;
+	border-radius: 10rem;
+	border: .2rem solid white;
+	padding: 10px;
+}
+header h2{
+	color: white;
+}
+header p{
+	color: white;
+	margin-top:0;
+}
+header div.out-link img{
+	width: 2rem;
+	height: 2rem;
+}
+header div.base-info{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+header div.base-info div{
+	margin: 2.5rem 2rem;
+}
+header div.base-info .info-title{
+	color: white;
+	font-weight: bold;
+}
+header div.base-info .info-value{
+	color:rgb(229,188,92);
+	font-weight: bold;
+}
+
+section#about{
+	display:flex;
+	background: rgb(64,53,81);
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	padding: 0 5%;
+}
+section .section-title{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 2rem;
+}
+section#about .about-section-title div.about-section-avatar{
+	border: 1.5px solid rgb(253,205,93);
+	border-radius: 10rem;
+	width: 4.5rem;
+	height:4.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+section#about .about-section-title div.about-section-avatar img{
+	width: 2.5rem;
+	height:2.5rem;
+	background: rgb(253,205,93);
+	padding: .5rem;
+	border-radius: 10rem;
+}
+section .section-span{
+	font-size: 1.8rem;
+	font-weight: bold;
+	color: white;
+	margin: 1rem;
+}
+section .underLine{
+	width: 4.5rem;
+	background: white;
+	height: .2rem;
+	opacity: 0.5;
+}
+section .section-title-tip{
+	font-size: 1rem;
+	color: white
+}
+section#about .about-section-content{
+	width: 100%;
+	height: 26rem;
+	display: flex;
+	justify-content: space-around;
+	/*align-items: center;*/
+	padding: 0 5rem 5rem 5rem;
+	align-items: stretch;
+}
+section#about .about-section-content .intro{
+	width: 29%;
+	word-break: break-all;
+	margin-right:2%;
+	color: white;
+}
+section#about .about-section-content .divide{
+	width: 28%;
+	height:100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+section#about .about-section-content .divide .out{
+	width: 11rem;
+	height: 11rem;
+	border:.2rem solid rgb(254,207,93);
+	border-radius: 20rem; 
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+section#about .about-section-content .divide .in{
+	width: 9rem;
+	height:9rem;
+	background: rgb(254,207,93);
+	border-radius: 20rem; 
+}
+section#about .about-section-content .skills{
+	width:29%;
+	margin-left:2%;
+	word-break: break-all;
+	color: white;
+}
+section#about .about-section-content .skills .skills-fill{
+	width: 100%;
+	background: rgb(78,65,97);
+	height: 2rem;
+	border-radius: .2rem;
+	display: flex;
+	justify-content: flex-start;
+	margin-bottom: .8rem;
+}
+section#about .about-section-content .skills .skills-fill .skills-item{
+	padding:0 1rem;
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+section#about .about-section-content .skill-title{
+	font-size: .9rem;
+}
+section#about .about-section-content .skill-name{
+	font-size: .9rem;
+	color: white;
+}
+section#about .about-section-content .skill-val{
+	font-size: .9rem;
+	color: black;
+	font-weight: bold;
+}
+section#about .about-section-content .skills .skills-fill .skill-actual{
+	background: rgb(254,205,93);
+	height: 100%;
+	border-radius: .2rem;
+}
+section#about .about-section-content .skills .skills-fill .skills-html-actual{
+	width:90%;
+}
+section#about .about-section-content .skills .skills-fill .skills-js-actual{
+	width:80%;
+}
+section#about .about-section-content .skills .skills-fill .skills-java-actual{
+	width:70%;
+}
+section#about .about-section-content .skills .skills-fill .skills-python-actual{
+	width:50%;
+}
+section#about .about-section-content .skills .skills-fill .skills-linux-actual{
+	width:60%;
+}
+section#about .about-section-content .skills .skills-fill .skills-git-actual{
+	width:60%;
+}
+
+section#work{
+	display:flex;
+	background: rgb(254,207,93);
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	padding: 0 5%;
+}
+section#honor{
+	display:flex;
+	background: rgb(254,237,189);
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	padding: 0 5%;
+}
+section#honor .section-span{
+	color: rgb(74,77,97);
+}
+section#honor .underLine{
+	background: black;
+}
+section#honor .section-title-tip{
+	color: rgb(148,153,176);
+}
+/*section .section-span{
+	font-size: 1.8rem;
+	font-weight: bold;
+	color: white;
+	margin: 1rem;
+}
+section .underLine{
+	width: 4.5rem;
+	background: white;
+	height: .2rem;
+	opacity: 0.5;
+}
+section .section-title-tip{
+	font-size: 1rem;
+	color: white
+}*/

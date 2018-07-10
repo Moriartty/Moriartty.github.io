@@ -1,0 +1,80 @@
+@media screen and (min-width: 1590px){
+	html,body{
+		font-size: 16px;
+	}
+	div.container{
+		padding:0 14rem;
+	}
+	div.left{
+		width:14rem;
+		left:-14rem;
+	}
+	div.right{
+		width:14rem;
+		margin-left: -14rem;
+		right:-14rem;
+	}
+	nav a{
+		padding: 1rem 2.5rem;
+	}
+}
+@media screen and (min-width:1000px) and (max-width: 1589px){
+	html,body{
+		font-size: 10px;
+	}
+	div.container{
+		padding:0 10rem;
+	}
+	div.left{
+		width:10rem;
+		left:-10rem;
+	}
+	div.right{
+		width:10rem;
+		margin-left: -10rem;
+		right:-10rem;
+	}
+	nav a{
+		padding: 1rem 1.5rem;
+	}
+}
+@media screen and (min-width: 650px) and (max-width:999px){
+	html,body{
+		font-size: 6px;
+	}
+	div.container{
+		padding:0 8rem;
+	}
+	div.left{
+		width:8rem;
+		left:-8rem;
+	}
+	div.right{
+		width:8rem;
+		margin-left: -8rem;
+		right:-8rem;
+	}
+	nav a{
+		padding:  1rem 1rem;
+	}
+}
+@media screen and (min-width: 350px) and (max-width:649px){
+	html,body{
+		font-size: 4px;
+	}
+	div.container{
+		padding:0;
+	}
+	div.left{
+		width:0rem;
+		left:-0rem;
+	}
+	div.right{
+		width:0rem;
+		margin-left: -0rem;
+		right:-0rem;
+	}
+	nav a{
+		padding:  1rem 0.5rem;
+	}
+}
