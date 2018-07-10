@@ -1,4 +1,24 @@
-@media screen and (min-width: 1590px){
+@media screen and (min-width: 1590px) and (max-width: 1799px){
+	html,body{
+		font-size: 16px;
+	}
+	div.container{
+		padding:0 16rem;
+	}
+	div.left{
+		width:16rem;
+		left:-16rem;
+	}
+	div.right{
+		width:16rem;
+		margin-left: -16rem;
+		right:-16rem;
+	}
+	nav a{
+		padding: 1rem 2.5rem;
+	}
+}
+@media screen and (min-width: 1590px) and (max-width: 1799px){
 	html,body{
 		font-size: 16px;
 	}
