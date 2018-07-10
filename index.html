@@ -7,14 +7,16 @@
 	<link rel="stylesheet" type="text/css" href="./style.css">
 	<link rel="stylesheet" type="text/css" href="./responsive.css">
 	<style type="text/css">
-		@font-face {
+/*		@font-face {
             font-family: 'anticon';
             src: url('./fonts/anticon.eot');
             /* IE9*/
             src: url('./fonts/anticon.woff') format('woff'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('./fonts/anticon.ttf') format('truetype'), /* iOS 4.1- */ url('./fonts/anticon.svg#iconfont') format('svg');
-        }
+        }*/
 	</style>
 	<script type="text/javascript" src="./js/jquery.min.js"></script>
+	<script type="text/javascript" src="./js/template.min.js"></script>
+	<script type="text/javascript" src="./js/source.js"></script>
 </head>
 <body>
 	<div class="container">
@@ -26,35 +28,76 @@
 				<a href="#contact">CONTACT</a>
 			</nav>
 			<header>
-				<div class="moriarty">
-					<img src="./images/ic_launcher.png">
-				</div>
-				<h2 class="myName">Moriarty</h2>
-				<p class="myJob">I'm a Front-End engineer</p>
-				<div class="out-link">
-					<img src="./images/github.svg">
-				</div>
-				<div class="base-info">
-					<div>
-						<span class="info-title">Age :</span>
-						<span class="info-value">23</span>
+				<script type="text/html" id="tempHeader">
+					<div class="avatar">
+						<img src="{{avatar}}">
 					</div>
-					<div>
-						<span class="info-title">Working at :</span>
-						<span class="info-value">TCL云创科技有限公司</span>
+					<h2 class="myName">{{userName}}</h2>
+					<p class="myJob">{{job}}</p>
+					<div class="out-link">
+						{{each outLinks as o}}
+						<a href="{{o.href?o.href:'javascript:;'}}" target="_blank"><img src="{{o.iconURL}}"></a>
+						{{/each}}
 					</div>
-				</div>
+					<div class="base-info">
+						{{each baseInfo as o,i}}
+						<div>
+							<span class="info-title">{{i}} :</span>
+							<span class="info-value">{{o}}</span>
+						</div>
+						{{/each}}
+					</div>
+				</script>
 			</header>
 			<section id="about">
-				<div class="section-title about-section-title">
+				<script type="text/html" id="tempAboutSection">
+					<div class="section-title about-section-title">
+						<div class="about-section-avatar">
+							<img src="{{aboutSectionAvatar}}">
+						</div>
+						<span class="section-span">{{aboutSectionSpan}}</span>
+						<div class="underLine"></div>
+						<p class="section-title-tip">{{aboutSectionTip}}</p>
+					</div>
+					<div class="about-section-content">
+						<div class="intro">
+							<h3 class="intro-title">{{introTitle}}</h3>
+							<div class="intro-content">{{introContent}}</div>
+						</div>
+						<div class="divide">
+							<div class="out"><div class="in"></div></div>
+						</div>
+						<div class="skills">
+							<h3 class="skills-title">MY SKILLS</h3>
+							<div class="skills-content">
+								{{each skills as skill}}
+								<div class="sub-skill">
+									<p class="skill-title">{{skill.title}}</p>
+									{{each skill.content as o}}
+									<div class="skills-fill">
+										<div class="skill-actual" style="width: {{o.val}}">
+											<div class="skills-item">
+												<span class="skill-name">{{o.name}}</span>
+												<span class="skill-val">{{o.val}}</span>
+											</div>
+										</div>
+									</div>
+									{{/each}}
+								</div>
+								{{/each}}
+							</div>
+						</div>
+					</div>
+				</script>
+				<!-- <div class="section-title about-section-title">
 					<div class="about-section-avatar">
 						<img src="./images/section-title-avatar.png">
 					</div>
 					<span class="section-span">ABOUT</span>
 					<div class="underLine"></div>
 					<p class="section-title-tip">DO YOU WAT TO KNOW ME?</p>
-				</div>
-				<div class="about-section-content">
+				</div> -->
+				<!-- <div class="about-section-content">
 					<div class="intro">
 						<h4 class="intro-title">WHO AM I?</h4>
 						<div class="intro-content">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
@@ -77,7 +120,6 @@
 											<span class="skill-name">HTML/CSS</span>
 											<span class="skill-val">90%</span>
 										</div>
-
 									</div>
 								</div>
 								<div class="skills-fill">
@@ -126,7 +168,7 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> -->
 			</section>
 			<section id="work">
 				<div class="section-title work-section-title">

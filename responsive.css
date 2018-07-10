@@ -1,4 +1,4 @@
-@media screen and (min-width: 1590px) and (max-width: 1799px){
+@media screen and (min-width: 1800px){
 	html,body{
 		font-size: 16px;
 	}
@@ -40,7 +40,7 @@
 }
 @media screen and (min-width:1000px) and (max-width: 1589px){
 	html,body{
-		font-size: 10px;
+		font-size: 12px;   
 	}
 	div.container{
 		padding:0 10rem;
@@ -58,7 +58,7 @@
 		padding: 1rem 1.5rem;
 	}
 }
-@media screen and (min-width: 650px) and (max-width:999px){
+@media screen and (min-width: 700px) and (max-width:999px){
 	html,body{
 		font-size: 6px;
 	}
@@ -78,7 +78,7 @@
 		padding:  1rem 1rem;
 	}
 }
-@media screen and (min-width: 350px) and (max-width:649px){
+@media screen and (min-width: 350px) and (max-width:699px){
 	html,body{
 		font-size: 4px;
 	}

@@ -52,11 +52,12 @@ header{
 	font-size: 1rem;
 	align-items: center;
 	background:#746983;
+	padding: 1.5rem;
 }
-header div.moriarty{
+header div.avatar{
 	margin-top: 1rem;
 }
-header div.moriarty img{
+header div.avatar img{
 	width: 8rem;
 	height:8rem;
 	border-radius: 10rem;
@@ -77,10 +78,11 @@ header div.out-link img{
 header div.base-info{
 	display: flex;
 	justify-content: center;
+	flex-flow: wrap;
 	width: 100%;
 }
 header div.base-info div{
-	margin: 2.5rem 2rem;
+	margin: 2rem 2rem 0 2rem;
 }
 header div.base-info .info-title{
 	color: white;
@@ -216,7 +218,7 @@ section#about .about-section-content .skills .skills-fill .skill-actual{
 	height: 100%;
 	border-radius: .2rem;
 }
-section#about .about-section-content .skills .skills-fill .skills-html-actual{
+/*section#about .about-section-content .skills .skills-fill .skills-html-actual{
 	width:90%;
 }
 section#about .about-section-content .skills .skills-fill .skills-js-actual{
@@ -234,7 +236,7 @@ section#about .about-section-content .skills .skills-fill .skills-linux-actual{
 section#about .about-section-content .skills .skills-fill .skills-git-actual{
 	width:60%;
 }
-
+*/
 section#work{
 	display:flex;
 	background: rgb(254,207,93);
