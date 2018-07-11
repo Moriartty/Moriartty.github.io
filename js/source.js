@@ -3,14 +3,15 @@ let headerData = {
 	avatar:'./images/ic_launcher.png',
 	job:"I'm a Front-End engineer",
 	outLinks:[
-		{iconURL:"./images/github.svg",href:"https://github.com/Moriartty"}
+		{iconURL:"./images/github.svg",href:"https://github.com/Moriartty",qrcode:""},
+		{iconURL:"./images/wechat.svg",href:"",qrcode:"./images/WechatIMG1.jpeg"},
+		{iconURL:"./images/steam.svg",href:"",qrcode:"",tip:"肥肠柚猫饼"}
 	],
 	baseInfo:{
 		"Age":'23',
 		"Working At":'TCL云创科技有限公司',
 		"Phone":'13889446741',
-		"Email":'Moriarty_C@163.com',
-		"WeChat":"c2992821771"
+		"Email":'Moriarty_C@163.com'
 	}
 };
 let aboutSectionData = {

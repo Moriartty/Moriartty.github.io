@@ -24,6 +24,15 @@ div.right{
 	margin-left: -14rem;
 	right:-14rem;
 }
+/*div.main-header{
+	background: url('../images/background.jpg');
+	background-origin: border-box; 
+	background-size:100%;
+}
+div.main-header img.background{
+	width: 100%;
+	float: top;
+}*/
 
 nav{
 	display: flex;
@@ -64,8 +73,9 @@ header div.avatar img{
 	border: .2rem solid white;
 	padding: 10px;
 }
-header h2{
+header h3.myName{
 	color: white;
+	/*font-size: 2.5rem;*/
 }
 header p{
 	color: white;
@@ -74,6 +84,8 @@ header p{
 header div.out-link img{
 	width: 2rem;
 	height: 2rem;
+	margin: 0 1rem;
+	font-size: 2rem;
 }
 header div.base-info{
 	display: flex;
@@ -247,7 +259,7 @@ section#work .work-section-content .work-slider{
 .carousel{
     background-color: #eee;
     overflow: hidden;
-    border-radius: 5px;
+    border-radius: 1rem;
 }
 .carousel .carousel-inner .item{
     margin-bottom: 0;
@@ -268,12 +280,14 @@ section#work .project{
 	margin: 0 0 1rem 0;
 }
 section#work .projName{
+	font-size: 1.3rem;
 	margin-top:0 ;
 }
 section#work .projInfo{
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 1rem; 
+	margin-bottom: 1rem;
+	font-size: 1rem; 
 }
 section#work .projPoints{
 	font-size: .8rem;
@@ -324,3 +338,17 @@ section .section-title-tip{
 	font-size: 1rem;
 	color: white
 }*/
+.modalQrcode .modal-dialog{
+	width: 20rem;
+	height: 20rem;
+}
+.modalQrcode .modal-content{
+	text-align: center;
+	/*display: flex;
+	justify-content: center;
+	align-items: center;*/
+}
+.modalQrcode img{
+	width: 18rem;
+	height:18rem;
+}

@@ -38,4 +38,14 @@
 	        $img.css({width:'100%', height:'auto', maxHeight:'none', marginTop:Math.abs(height-width/delta)/2});
 	    }
 	}
+	$(document)
+		.on('click','.out-link a',function(e){
+			e.stopPropagation();
+			let qrcode = $(this).attr('data-code');
+			if(qrcode&&qrcode!==''){
+				$('.modalQrcode').modal({width:"11rem",height:"11rem"}).find('.modal-content').html(template('tempQrcode',{qrcode}));
+			}
+			else if($(this).attr('data-content'))
+				$(this).popover('show');
+		})
 })()

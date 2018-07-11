@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>陈冰的个人简历</title>
+	<title>陈冰</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
@@ -15,11 +15,13 @@
 	<script type="text/javascript" src="./js/template.min.js"></script>
 	<script type="text/javascript" src="./js/source.js"></script>
 	<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./js/test.js"></script>
 </head>
 <body>
 	<div class="main-container">
 		<div class="main">
-			<nav>
+			<div class="main-header">
+				<nav>
 				<a href="#about">ABOUT</a>
 				<a href="#work">WORK</a>
 				<a href="#honor">HONOR</a>
@@ -27,14 +29,19 @@
 			</nav>
 			<header>
 				<script type="text/html" id="tempHeader">
+					<!-- <img class="background" src="./images/background.jpg"> -->
 					<div class="avatar">
 						<img src="{{avatar}}">
 					</div>
-					<h2 class="myName">{{userName}}</h2>
+					<h3 class="myName">{{userName}}</h3>
 					<p class="myJob">{{job}}</p>
 					<div class="out-link">
 						{{each outLinks as o}}
-						<a href="{{o.href?o.href:'javascript:;'}}" target="_blank"><img src="{{o.iconURL}}"></a>
+						{{if o.href}}
+						<a href="{{o.href}}" target="_blank" data-code="{{o.qrcode}}"><img src="{{o.iconURL}}"></a>
+						{{else}}
+						<a href="javascript:;" data-code="{{o.qrcode}}" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="{{o.tip}}" data-placement="bottom"><img src="{{o.iconURL}}"></a>
+						{{/if}}
 						{{/each}}
 					</div>
 					<div class="base-info">
@@ -47,6 +54,7 @@
 					</div>
 				</script>
 			</header>
+			</div>
 			<section id="about">
 				<script type="text/html" id="tempAboutSection">
 					<div class="section-title about-section-title">
@@ -59,14 +67,14 @@
 					</div>
 					<div class="about-section-content">
 						<div class="intro">
-							<h3 class="intro-title">{{introTitle}}</h3>
+							<h4 class="intro-title">{{introTitle}}</h4>
 							<div class="intro-content">{{introContent}}</div>
 						</div>
 						<div class="divide">
 							<div class="out"><div class="in"></div></div>
 						</div>
 						<div class="skills">
-							<h3 class="skills-title">MY SKILLS</h3>
+							<h4 class="skills-title">MY SKILLS</h4>
 							<div class="skills-content">
 								{{each skills as skill}}
 								<div class="sub-skill">
@@ -89,56 +97,64 @@
 				</script>
 			</section>
 			<section id="work">
+			<script type="text/html" id="tempWorkSection">
 				<div class="section-title work-section-title">
 					<span class="section-span">WORK</span>
 					<div class="underLine"></div>
-					<p class="section-title-tip">DO YOU WAT TO KNOW ME?</p>
+					<p class="section-title-tip">DO YOU WANT TO KNOW ME?</p>
 				</div>
 				<div class="work-section-content">
-					<div class="work-text-content"></div>
+					<div class="work-text-content">
+						{{each projectInfoList as o,i}}
+						<div class="project">
+							<h4 class="projName"><b>{{o.projName}}</b></h4>
+							<div class="projInfo">
+								<span class="date">{{o.date}}</span>
+								<span class="character">{{o.character}}</span>
+							</div>
+							<ul class="projPoints">
+								{{each o.points as item}}
+								<li class="projPoint">{{item}}</li>
+								{{/each}}
+							</ul>
+						</div>
+						{{if i<projectInfoList.length-1&&projectInfoList.length>1}}
+						<div class="white-divider"></div>
+						{{/if}}
+						{{/each}}
+					</div>
 					<div class="work-slider">
-						<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+						<div id="carousel" class="carousel slide" data-ride="carousel">
 						  <!-- Indicators -->
 						  <ol class="carousel-indicators">
-						    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-						    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-						    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+						  	{{each sliderImages as o,i}}
+						  	<li data-target="#carousel" data-slide-to="{{i}}" class="{{i==0?'active':''}}"></li>
+						  	{{/each}}
 						  </ol>
-
 						  <!-- Wrapper for slides -->
 						  <div class="carousel-inner" role="listbox">
-						    <div class="item active">
-						      <img src="./images/slider-1.png" >
+						  {{each sliderImages as o,i}}
+						  	<div class="item {{i==0?'active':''}}">
+						      <img src="{{o.url}}" onload="centerThumb(this)">
 						      <div class="carousel-caption">
-						        ...
+						        {{o.caption}}
 						      </div>
 						    </div>
-						    <div class="item">
-						      <img src="./images/slider-2.png" >
-						      <div class="carousel-caption">
-						        ...
-						      </div>
-						    </div>
-						    <div class="item">
-						      <img src="./images/slider-3.png" >
-						      <div class="carousel-caption">
-						        ...
-						      </div>
-						    </div>
+						  {{/each}}
 						  </div>
-
 						  <!-- Controls -->
-						  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+						  <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
 						    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
 						    <span class="sr-only">Previous</span>
 						  </a>
-						  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+						  <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
 						    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 						    <span class="sr-only">Next</span>
 						  </a>
 						</div>
 					</div>
 				</div>
+			</script>
 			</section>
 			<section id="honor">
 				<div class="section-title honor-section-title">
@@ -152,6 +168,16 @@
 		<div class="left"></div>
 		<div class="right"></div>
 	</div>
+	<div class="modal fade modalQrcode" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+	  <div class="modal-dialog modal-sm" role="document">
+	    <div class="modal-content">
+	      <script type="text/html" id="tempQrcode">
+	      	<img src="{{qrcode}}">
+	      </script>
+	    </div>
+	  </div>
+	</div>
+
 	<script type="text/javascript" src="./js/moriarty.js"></script>
 </body>
 </html>
