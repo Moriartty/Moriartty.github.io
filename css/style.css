@@ -150,21 +150,21 @@ section#about .about-section-content{
 	align-items: stretch;
 }
 section#about .about-section-content .intro{
-	width: 29%;
+	width: 34%;
 	word-break: break-all;
 	margin-right:2%;
 	color: white;
 }
 section#about .about-section-content .divide{
-	width: 28%;
+	width: 18%;
 	height:100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 section#about .about-section-content .divide .out{
-	width: 8rem;
-	height: 8rem;
+	/*width: 8rem;
+	height: 8rem;*/
 	border:.2rem solid rgb(254,207,93);
 	border-radius: 20rem; 
 	display: flex;
@@ -173,13 +173,13 @@ section#about .about-section-content .divide .out{
 
 }
 section#about .about-section-content .divide .in{
-	width: 6rem;
-	height:6rem;
+	/*width: 6rem;
+	height:6rem;*/
 	background: rgb(254,207,93);
 	border-radius: 20rem; 
 }
 section#about .about-section-content .skills{
-	width:29%;
+	width:34%;
 	margin-left:2%;
 	word-break: break-all;
 	color: white;
