@@ -1,10 +1,9 @@
 html,body{
 	margin:0;
 	padding: 0;
-	font-family: anticon;
 }
-div.container{
-	padding:0 14rem;
+div.main-container{
+	padding: 0 14rem;
 }
 div.main{
 	float:left;
@@ -41,6 +40,7 @@ nav a{
 	background: #746983;
 }
 nav a:hover{
+	text-decoration: none;
 	background: white;
 	color:#746983;
 }
@@ -82,7 +82,8 @@ header div.base-info{
 	width: 100%;
 }
 header div.base-info div{
-	margin: 2rem 2rem 0 2rem;
+	margin: 2rem 1.5rem 0 1.5rem;
+	font-size: .9rem;
 }
 header div.base-info .info-title{
 	color: white;
@@ -128,13 +129,14 @@ section .section-span{
 	font-size: 1.8rem;
 	font-weight: bold;
 	color: white;
-	margin: 1rem;
+	margin: .8rem;
 }
 section .underLine{
 	width: 4.5rem;
 	background: white;
 	height: .2rem;
 	opacity: 0.5;
+	margin-bottom: .8rem;
 }
 section .section-title-tip{
 	font-size: 1rem;
@@ -142,11 +144,11 @@ section .section-title-tip{
 }
 section#about .about-section-content{
 	width: 100%;
-	height: 26rem;
+	height: 36rem;
 	display: flex;
 	justify-content: space-around;
 	/*align-items: center;*/
-	padding: 0 5rem 5rem 5rem;
+	padding: 0 0 5rem 0;
 	align-items: stretch;
 }
 section#about .about-section-content .intro{
@@ -218,25 +220,7 @@ section#about .about-section-content .skills .skills-fill .skill-actual{
 	height: 100%;
 	border-radius: .2rem;
 }
-/*section#about .about-section-content .skills .skills-fill .skills-html-actual{
-	width:90%;
-}
-section#about .about-section-content .skills .skills-fill .skills-js-actual{
-	width:80%;
-}
-section#about .about-section-content .skills .skills-fill .skills-java-actual{
-	width:70%;
-}
-section#about .about-section-content .skills .skills-fill .skills-python-actual{
-	width:50%;
-}
-section#about .about-section-content .skills .skills-fill .skills-linux-actual{
-	width:60%;
-}
-section#about .about-section-content .skills .skills-fill .skills-git-actual{
-	width:60%;
-}
-*/
+
 section#work{
 	display:flex;
 	background: rgb(254,207,93);
@@ -245,6 +229,68 @@ section#work{
 	align-items: center;
 	padding: 0 5%;
 }
+section#work .work-section-content{
+	padding:0 0 2rem 0;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	color: white;
+}
+section#work .work-section-content .work-text-content{
+	width:40%;
+	margin-right: 5%;
+}
+section#work .work-section-content .work-slider{
+	width:55%;
+}
+.carousel{
+    background-color: #eee;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.carousel .carousel-inner .item{
+    margin-bottom: 0;
+    height: 25rem;
+    width: 35rem;
+}
+/*.carousel-indicators{
+    top: inherit;
+    bottom: 10px;
+}
+.carousel-indicators>li{
+    cursor: pointer;
+}
+.carousel-caption{
+    padding: 5px 10px;
+}*/
+section#work .project{
+	margin: 0 0 1rem 0;
+}
+section#work .projName{
+	margin-top:0 ;
+}
+section#work .projInfo{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 1rem; 
+}
+section#work .projPoints{
+	font-size: .8rem;
+}
+section#work .white-divider{
+	height: 1px;
+	background: white;
+	width: 100%;
+	margin-bottom:1rem; 
+}
+
+
+
+
+
+
+
 section#honor{
 	display:flex;
 	background: rgb(254,237,189);

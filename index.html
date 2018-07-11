@@ -4,6 +4,8 @@
 	<title>陈冰的个人简历</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap-theme.min.css">
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
 	<link rel="stylesheet" type="text/css" href="./css/responsive.css">
 	<style type="text/css">
@@ -12,9 +14,11 @@
 	<script type="text/javascript" src="./js/jquery.min.js"></script>
 	<script type="text/javascript" src="./js/template.min.js"></script>
 	<script type="text/javascript" src="./js/source.js"></script>
+	<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./js/test.js"></script>
 </head>
 <body>
-	<div class="container">
+	<div class="main-container">
 		<div class="main">
 			<nav>
 				<a href="#about">ABOUT</a>
@@ -56,14 +60,14 @@
 					</div>
 					<div class="about-section-content">
 						<div class="intro">
-							<h3 class="intro-title">{{introTitle}}</h3>
+							<h4 class="intro-title">{{introTitle}}</h4>
 							<div class="intro-content">{{introContent}}</div>
 						</div>
 						<div class="divide">
 							<div class="out"><div class="in"></div></div>
 						</div>
 						<div class="skills">
-							<h3 class="skills-title">MY SKILLS</h3>
+							<h4 class="skills-title">MY SKILLS</h4>
 							<div class="skills-content">
 								{{each skills as skill}}
 								<div class="sub-skill">
@@ -84,93 +88,66 @@
 						</div>
 					</div>
 				</script>
-				<!-- <div class="section-title about-section-title">
-					<div class="about-section-avatar">
-						<img src="./images/section-title-avatar.png">
-					</div>
-					<span class="section-span">ABOUT</span>
-					<div class="underLine"></div>
-					<p class="section-title-tip">DO YOU WAT TO KNOW ME?</p>
-				</div> -->
-				<!-- <div class="about-section-content">
-					<div class="intro">
-						<h4 class="intro-title">WHO AM I?</h4>
-						<div class="intro-content">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-						aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-						aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
-					</div>
-					<div class="divide">
-						<div class="out">
-							<div class="in"></div>
-						</div>
-					</div>
-					<div class="skills">
-						<h4 class="skills-title">MY SKILLS</h4>
-						<div class="skills-content">
-							<div class="sub-skill">
-								<p class="skill-title">Coding programs</p>
-								<div class="skills-fill">
-									<div class="skills-html-actual skill-actual">
-										<div class="skills-item">
-											<span class="skill-name">HTML/CSS</span>
-											<span class="skill-val">90%</span>
-										</div>
-									</div>
-								</div>
-								<div class="skills-fill">
-									<div class="skills-js-actual skill-actual">
-										<div class="skills-item">
-											<span class="skill-name">Javascript</span>
-											<span class="skill-val">80%</span>
-										</div>
-									</div>
-								</div>
-								<div class="skills-fill">
-									<div class="skills-java-actual skill-actual">
-										<div class="skills-item">
-											<span class="skill-name">Java</span>
-											<span class="skill-val">70%</span>
-										</div>
-									</div>
-								</div>
-								<div class="skills-fill">
-									<div class="skills-python-actual skill-actual">
-										<div class="skills-item">
-											<span class="skill-name">Python</span>
-											<span class="skill-val">50%</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="sub-skill">
-								<p class="skill-title">Others</p>
-								<div class="skills-fill">
-									<div class="skills-linux-actual skill-actual">
-										<div class="skills-item">
-											<span class="skill-name">Linux</span>
-											<span class="skill-val">60%</span>
-										</div>
-									</div>
-								</div>
-								<div class="skills-fill">
-									<div class="skills-git-actual skill-actual">
-										<div class="skills-item">
-											<span class="skill-name">Git</span>
-											<span class="skill-val">60%</span>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div> -->
 			</section>
 			<section id="work">
+			<script type="text/html" id="tempWorkSection">
 				<div class="section-title work-section-title">
 					<span class="section-span">WORK</span>
 					<div class="underLine"></div>
-					<p class="section-title-tip">DO YOU WAT TO KNOW ME?</p>
+					<p class="section-title-tip">DO YOU WANT TO KNOW ME?</p>
 				</div>
+				<div class="work-section-content">
+					<div class="work-text-content">
+						{{each projectInfoList as o,i}}
+						<div class="project">
+							<h4 class="projName"><b>{{o.projName}}</b></h4>
+							<div class="projInfo">
+								<span class="date">{{o.date}}</span>
+								<span class="character">{{o.character}}</span>
+							</div>
+							<ul class="projPoints">
+								{{each o.points as item}}
+								<li class="projPoint">{{item}}</li>
+								{{/each}}
+							</ul>
+						</div>
+						{{if i<projectInfoList.length-1&&projectInfoList.length>1}}
+						<div class="white-divider"></div>
+						{{/if}}
+						{{/each}}
+					</div>
+					<div class="work-slider">
+						<div id="carousel" class="carousel slide" data-ride="carousel">
+						  <!-- Indicators -->
+						  <ol class="carousel-indicators">
+						  	{{each sliderImages as o,i}}
+						  	<li data-target="#carousel" data-slide-to="{{i}}" class="{{i==0?'active':''}}"></li>
+						  	{{/each}}
+						  </ol>
+						  <!-- Wrapper for slides -->
+						  <div class="carousel-inner" role="listbox">
+						  {{each sliderImages as o,i}}
+						  	<div class="item {{i==0?'active':''}}">
+						      <img src="{{o.url}}" onload="centerThumb(this)">
+						      <div class="carousel-caption">
+						        {{o.caption}}
+						      </div>
+						    </div>
+						  {{/each}}
+						  </div>
+						  <!-- Controls -->
+						  <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+						    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						    <span class="sr-only">Previous</span>
+						  </a>
+						  <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+						    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						    <span class="sr-only">Next</span>
+						  </a>
+						</div>
+					</div>
+				</div>
+			</script>
 			</section>
 			<section id="honor">
 				<div class="section-title honor-section-title">

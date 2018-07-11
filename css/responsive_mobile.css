@@ -1,18 +1,18 @@
+div.main-container{
+	padding: 0rem;
+}
+div.left{
+	width:0rem;
+	left:0rem;
+}
+div.right{
+	width:0rem;
+	margin-left: 0rem;
+	right:0rem;
+}
 @media screen and (min-width: 1800px){
 	html,body{
-		font-size: 36px;
-	}
-	div.container{
-		padding:0;
-	}
-	div.left{
-		width:0rem;
-		left:0rem;
-	}
-	div.right{
-		width:0rem;
-		margin-left: 0rem;
-		right:0rem;
+		font-size: 34px;
 	}
 	nav a{
 		padding: 1rem 2.5rem;
@@ -20,19 +20,7 @@
 }
 @media screen and (min-width: 1590px) and (max-width: 1799px){
 	html,body{
-		font-size: 34px;
-	}
-	div.container{
-		padding:0;
-	}
-	div.left{
-		width:0rem;
-		left:0rem;
-	}
-	div.right{
-		width:0rem;
-		margin-left: 0rem;
-		right:0rem;
+		font-size: 32px;
 	}
 	nav a{
 		padding: 1rem 2.5rem;
@@ -40,19 +28,7 @@
 }
 @media screen and (min-width:1000px) and (max-width: 1589px){
 	html,body{
-		font-size: 32px;
-	}
-	div.container{
-		padding:0;
-	}
-	div.left{
-		width:0rem;
-		left:0rem;
-	}
-	div.right{
-		width:0rem;
-		margin-left: 0rem;
-		right:0rem;
+		font-size: 30px;
 	}
 	nav a{
 		padding: 1rem 1.5rem;
@@ -62,37 +38,13 @@
 	html,body{
 		font-size: 28px;
 	}
-	div.container{
-		padding:0;
-	}
-	div.left{
-		width:0rem;
-		left:0rem;
-	}
-	div.right{
-		width:0rem;
-		margin-left: 0rem;
-		right:0rem;
-	}
 	nav a{
 		padding:  1rem 1rem;
 	}
 }
 @media screen and (min-width: 350px) and (max-width:699px){
 	html,body{
-		font-size: 20px;
-	}
-	div.container{
-		padding:0;
-	}
-	div.left{
-		width:0rem;
-		left:0rem;
-	}
-	div.right{
-		width:0rem;
-		margin-left: 0rem;
-		right:0rem;
+		font-size: 26px;
 	}
 	nav a{
 		padding:  1rem 0.5rem;

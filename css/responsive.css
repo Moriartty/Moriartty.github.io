@@ -2,7 +2,7 @@
 	html,body{
 		font-size: 16px;
 	}
-	div.container{
+	div.main-container{
 		padding:0 16rem;
 	}
 	div.left{
@@ -22,7 +22,7 @@
 	html,body{
 		font-size: 16px;
 	}
-	div.container{
+	div.main-container{
 		padding:0 14rem;
 	}
 	div.left{
@@ -42,7 +42,7 @@
 	html,body{
 		font-size: 12px;   
 	}
-	div.container{
+	div.main-container{
 		padding:0 10rem;
 	}
 	div.left{
@@ -62,17 +62,17 @@
 	html,body{
 		font-size: 6px;
 	}
-	div.container{
-		padding:0 8rem;
+	div.main-container{
+		padding:0 4rem;
 	}
 	div.left{
-		width:8rem;
-		left:-8rem;
+		width:4rem;
+		left:-4rem;
 	}
 	div.right{
-		width:8rem;
-		margin-left: -8rem;
-		right:-8rem;
+		width:4rem;
+		margin-left: -4rem;
+		right:-4rem;
 	}
 	nav a{
 		padding:  1rem 1rem;
@@ -82,7 +82,7 @@
 	html,body{
 		font-size: 4px;
 	}
-	div.container{
+	div.main-container{
 		padding:0;
 	}
 	div.left{
