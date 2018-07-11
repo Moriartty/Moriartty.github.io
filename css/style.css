@@ -339,8 +339,8 @@ section .section-title-tip{
 	color: white
 }*/
 .modalQrcode .modal-dialog{
-	width: 20rem;
-	height: 20rem;
+	width: 18rem;
+	height: 18rem;
 }
 .modalQrcode .modal-content{
 	text-align: center;
@@ -349,6 +349,6 @@ section .section-title-tip{
 	align-items: center;*/
 }
 .modalQrcode img{
-	width: 18rem;
-	height:18rem;
+	width: 16rem;
+	height:16rem;
 }

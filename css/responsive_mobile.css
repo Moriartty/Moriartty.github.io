@@ -19,7 +19,7 @@ section#work .work-section-content .work-slider{
 }
 @media screen and (min-width: 1800px){
 	html,body{
-		font-size: 30px;
+		font-size: 26px;
 	}
 	nav a{
 		padding: 1rem 2.5rem;
@@ -27,7 +27,7 @@ section#work .work-section-content .work-slider{
 }
 @media screen and (min-width: 1590px) and (max-width: 1799px){
 	html,body{
-		font-size: 28px;
+		font-size: 24px;
 	}
 	nav a{
 		padding: 1rem 2.5rem;
@@ -35,7 +35,7 @@ section#work .work-section-content .work-slider{
 }
 @media screen and (min-width:1000px) and (max-width: 1589px){
 	html,body{
-		font-size: 26px;
+		font-size: 22px;
 	}
 	nav a{
 		padding: 1rem 1.5rem;
@@ -43,7 +43,7 @@ section#work .work-section-content .work-slider{
 }
 @media screen and (min-width: 700px) and (max-width:999px){
 	html,body{
-		font-size: 24px;
+		font-size: 20px;
 	}
 	nav a{
 		padding:  1rem 1rem;
@@ -51,7 +51,7 @@ section#work .work-section-content .work-slider{
 }
 @media screen and (min-width: 350px) and (max-width:699px){
 	html,body{
-		font-size: 22px;
+		font-size: 18px;
 	}
 	nav a{
 		padding:  1rem 0.5rem;
