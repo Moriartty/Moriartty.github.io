@@ -258,6 +258,7 @@ section#work .work-section-content .work-text-content{
 }
 section#work .work-section-content .work-slider{
 	width:55%;
+	margin-bottom: 1rem; 
 }
 .carousel{
     background-color: #eee;

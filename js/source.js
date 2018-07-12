@@ -85,7 +85,7 @@ let workSectionData = {
 			{projName:""},
 			{projName:""},
 		]},
-		{category:'微信小程序',id:"wxxcx",profit:[
+		{category:'小程序',id:"wxxcx",profit:[
 			{projName:'MeetingX',link:"https://github.com/Moriartty/MeetingX"},
 			{projName:""},
 			{projName:""},
