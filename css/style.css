@@ -87,6 +87,9 @@ header div.out-link img{
 	margin: 0 1rem;
 	font-size: 2rem;
 }
+header div.out-link img:hover{
+	transform: scale(1.2);
+}
 header div.base-info{
 	display: flex;
 	justify-content: center;
@@ -138,7 +141,7 @@ section#about .about-section-title div.about-section-avatar img{
 	border-radius: 10rem;
 }
 section .section-span{
-	font-size: 1.8rem;
+	font-size: 1.6rem;
 	font-weight: bold;
 	color: white;
 	margin: .8rem;
@@ -151,7 +154,7 @@ section .underLine{
 	margin-bottom: .8rem;
 }
 section .section-title-tip{
-	font-size: 1rem;
+	font-size: .9rem;
 	color: white
 }
 section#about .about-section-content{
@@ -298,16 +301,75 @@ section#work .white-divider{
 	width: 100%;
 	margin-bottom:1rem; 
 }
+section#work .work-show{
+	width: 100%;
+	/*display: flex;
+	justify-content: center;*/
+}
 
+section#work .work-show nav.work-show-nav{
+	display: flex;
+	justify-content: center;
+	font-size: .7rem;
+	background: rgb(254,207,93);
+	/*font-weight: bold;*/
+}
+section#work .work-show .work-show-nav a{
+	text-decoration: none;
+	color: white;
+	padding: .8rem 1.5rem;
+	background: rgb(254,207,93);
+	border:1px solid rgb(254,207,93);
+}
+section#work .work-show .work-show-nav a:hover{
+	text-decoration: none;
+	/*border-color: white !important; */
+	background: #d4b106;
 
-
-
-
-
+}
+section#work .work-show .work-show-nav a.active{
+	border-color:white;
+}
+section#work .work-show .work-show-section{
+	width: 100%;
+	/*display: flex;
+	justify-content: center;*/
+	display: none;
+	margin-top: 2rem;
+}
+section#work .work-show section.active{
+	display: flex;
+	flex-flow: wrap;
+	justify-content: center;
+}
+section#work .work-show .work-show-item{
+	width: 9rem;
+	height: 9rem;
+	transform:rotate(45deg);
+	background: rgb(255,238,191);
+	border-radius: .5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 2rem;
+	text-decoration: none;
+}
+section#work .work-show .work-show-item:hover{
+	transform: scale(1.2) rotate(45deg);
+}
+section#work .work-show section.work-show-section a.active{
+	background: rgb(74,68,83);
+}
+section#work .work-show .work-show-item span{
+	transform: rotate(-45deg);
+	font-weight: bold;
+	font-size: 1rem;
+	color: white;
+}
 
 section#honor{
 	display:flex;
-	background: rgb(254,237,189);
+	background: #fff1b8;
 	justify-content: center;
 	flex-direction: column;
 	align-items: center;
@@ -322,22 +384,65 @@ section#honor .underLine{
 section#honor .section-title-tip{
 	color: rgb(148,153,176);
 }
-/*section .section-span{
-	font-size: 1.8rem;
-	font-weight: bold;
-	color: white;
-	margin: 1rem;
+section#honor .honor-section-content{
+	width: 100%;
+	display: flex;
+	justify-content: center;
 }
-section .underLine{
-	width: 4.5rem;
+section#honor .honor-section-content div.honor-category{
+	width: 31%;
+	margin: 0 1% 2rem 1%;
 	background: white;
-	height: .2rem;
-	opacity: 0.5;
+	border-radius: 1rem;
 }
-section .section-title-tip{
+section#honor .honor-section-content div.col-divider{
+	width: 1px;
+	margin: 0 1%;
+	background:white;
+}
+section#honor .honor-section-content div.honor-icon{
+	height: 8rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-top-right-radius: 1rem;
+	border-top-left-radius: 1rem;
+}
+section#honor .honor-section-content div.honor-icon img{
+	width: 4rem;
+	height: 4rem;
+}
+section#honor .honor-section-content div.honor-icon img:hover{
+	transition: transform 1s;
+    -webkit-transition: -webkit-transform 1s;
+	transform: rotate(360deg);
+}
+section#honor .honor-section-content div.honor-icon span{
+	font-weight: bold;
 	font-size: 1rem;
-	color: white
-}*/
+	color: white;
+	margin-top: 1.5rem; 
+}
+section#honor .honor-details{
+	/*list-style: none;*/
+	padding-right: .51rem;
+}
+section#honor .honor-details li{
+	color: #262626;
+	font-size: .9rem;
+	font-weight: bold;
+	margin: .5rem 0;
+}
+footer .bottom-bar{
+	width: 100%;
+	background: black;
+	font-size: .8rem;
+	color:white;
+	text-align: center;
+	padding: 1rem
+}
+
 .modalQrcode .modal-dialog{
 	width: 18rem;
 	height: 18rem;

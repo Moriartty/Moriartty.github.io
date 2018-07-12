@@ -17,6 +17,16 @@ section#work .work-section-content .work-text-content{
 section#work .work-section-content .work-slider{
 	width:100%;
 }
+section#honor .honor-section-content{
+	width: 60%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+section#honor .honor-section-content div.honor-category{
+	width: 100%
+}
 @media screen and (min-width: 1800px){
 	html,body{
 		font-size: 24px;

@@ -65,5 +65,58 @@ let workSectionData = {
 		{url:"./images/slider-3.png",caption:''},
 		{url:"./images/slider-4.png",caption:''},
 		{url:"./images/slider-5.png",caption:''},
+	],
+	workshowList:[
+		{category:"Web",id:"web",profit:[
+			{projName:"Simplex",link:'http://simplex.tclcom.com/pms/webpages/index.jsp'},
+			{projName:"UserCare",link:"http://usercare-test.tclclouds.com/api/_usercare/newSurvey.html?surveyType=2018NPS"},
+			{projName:"轻办公"},
+			{projName:""},
+			{projName:""},
+			{projName:""},
+			{projName:""},
+		]},
+		{category:'Andriod',id:"android",profit:[
+			{projName:"Running Man",link:"https://github.com/Moriartty/RunningMan"},
+			{projName:"基于社交平台的通讯录",link:"https://github.com/Moriartty/Contacts"},
+			{projName:""},
+			{projName:""},
+			{projName:""},
+			{projName:""},
+			{projName:""},
+		]},
+		{category:'微信小程序',id:"wxxcx",profit:[
+			{projName:'MeetingX',link:"https://github.com/Moriartty/MeetingX"},
+			{projName:""},
+			{projName:""},
+			{projName:""},
+			{projName:""},
+			{projName:""},
+			{projName:""},
+		]},
+		{category:"Java",id:"java",profit:[
+			{projName:'情感分析系统',link:"https://github.com/Moriartty/Emotion_Analysis"},
+			{projName:""},
+			{projName:""},
+			{projName:""},
+			{projName:""},
+			{projName:""},
+			{projName:""},
+		]}
 	]
 }
+let honorSectionData = [
+	{category:"school",icon:"./images/school-honor.svg",color:"#bae637",honorList:[
+		{details:"获得 CET-6证书"},
+		{details:"本科毕业论文选为校级优秀论文，优秀率约为5%"}
+
+	]},
+	{category:"work",icon:"./images/work-honor.svg",color:"#36cfc9",honorList:[
+		{details:"获得TCL集团2017届优秀雏鹰奖，获奖率10%"}
+	]},
+	{category:"others",icon:"./images/others-honor.svg",color:"#40a9ff",honorList:[
+		{details:"发明专利《一种联系人数据管理方法及其管理系统》第一发明人，已受理"},
+		{details:"发明专利《一种联系人多信息二维码的生成、分享和后台自动监控处理的方法》第一发明人，已受理"},
+		{details:"发明专利《移动终端及其生成动作分类模型的方法、存储装置》唯一发明人，已受理"}
+	]},
+]

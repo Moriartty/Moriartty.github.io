@@ -1,14 +1,36 @@
 
 (function(){
+	template.helper('string2Lower',string2Lower);
+	template.helper('string2Upper',string2Upper);
+	function string2Lower(input){
+	    return input?input.toLowerCase():'';
+	}
+	function string2Upper(input){
+	    return input?input.toUpperCase():'';
+	}
+
+	/*
+	加载整个page的步骤
+	*/
 	loadPage();
 	function loadPage(){
 		$('header').html(template('tempHeader',headerData));
 		$('section#about').html(template('tempAboutSection',aboutSectionData));
 		$('section#work').html(template('tempWorkSection',workSectionData)).find('.carousel').carousel('cycle');
-		// $('.slider').xSlider({
-		// 	w:100
-		// })
+		$('section#honor').html(template('tempHonorSection',{honorSectionList:honorSectionData}));
+
+		let href = location.href.split('#')[1]?location.href.split('#')[1]:"";
+		if(href.indexOf('work')>=0)
+			toggleWorkSection($('.work-show-nav').find('a[href=#'+href+']'),href);
+		else{
+			let $target = $($('.work-show-nav').children('a').get(0));
+			href = $target.prop('href').split('#')[1];
+			toggleWorkSection($target,href);
+		}
 	}
+	/*
+	根据屏幕尺寸重新定义about区域中间圆形分割的大小
+	*/
 	resizeAboutDivide();
 	function resizeAboutDivide(){
 		if($(window).width()<700){
@@ -20,23 +42,10 @@
 			$('.divide .in').css('width',$('.divide').width()*0.8).css('height',$('.divide').width()*0.8);
 		}
 	}
-	//让图片能填充且居中在指定高度的容器中
-	function centerThumb(img){
-	    var $img=$(img);
-	    //获取容器的高度和宽度
-	    var $parent=$('#carousel');
-	    var width=$parent.width();
-	    var height=$parent.height();
-	    //容器的宽高比
-	    var delta0=width/height;
-	    //图片的宽高比
-	    var delta=img.width/img.height;
-	    //若容器的宽高比大于图片的，说明容器更“扁”
-	    if(delta0>delta){
-	        $img.css({height:'100%', width:'auto', maxWidth:'none', marginLeft:Math.abs(width-height*delta)/2});
-	    }else{
-	        $img.css({width:'100%', height:'auto', maxHeight:'none', marginTop:Math.abs(height-width/delta)/2});
-	    }
+	function toggleWorkSection($this,href){
+			$this.addClass('active').siblings('a').removeClass('active');
+			var $targetSection = $this.closest('.work-show').find('section#'+href);
+			$targetSection.addClass('active').siblings('section').removeClass('active');
 	}
 	$(document)
 		.on('click','.out-link a',function(e){
@@ -47,5 +56,10 @@
 			}
 			else if($(this).attr('data-content'))
 				$(this).popover('show');
+		})
+		.on('click','.work-show-nav a',function(e){
+			e.stopPropagation();
+			var href = $(this).prop('href').split('#')[1];
+			toggleWorkSection($(this),href);
 		})
 })()
