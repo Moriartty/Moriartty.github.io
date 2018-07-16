@@ -68,7 +68,13 @@
 					<div class="about-section-content">
 						<div class="intro">
 							<h4 class="intro-title">{{introTitle}}</h4>
-							<div class="intro-content">{{introContent}}</div>
+							<div class="intro-content">
+							<ul>
+								{{each introContent as o}}
+								<li>{{o}}</li>
+								{{/each}}
+							</ul>
+							</div>
 						</div>
 						<div class="divide">
 							<div class="out"><div class="in"></div></div>
@@ -81,7 +87,7 @@
 									<p class="skill-title">{{skill.title}}</p>
 									{{each skill.content as o}}
 									<div class="skills-fill">
-										<div class="skill-actual" style="width: {{o.val}}">
+										<div class="skill-actual" style="width: {{o.val}} !important">
 											<div class="skills-item">
 												<span class="skill-name">{{o.name}}</span>
 												<span class="skill-val">{{o.val}}</span>

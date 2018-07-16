@@ -19,9 +19,16 @@ let aboutSectionData = {
 	aboutSectionSpan:"ABOUT",
 	aboutSectionTip:"DO YOU WAT TO KNOW ME?",
 	introTitle:"WHO AM I?",
-	introContent:"我是陈冰，江西新余人，毕业于大连理工大学软件学院，就读专业为网络安全。"+
-				"写过C和Java，独立做过几个Andriod小应用和小程序,现在阴差阳错成为了一名渣前端，跟在大佬后面捡骨头吃(･ェ･。)"+
-				"是一流的韭菜，二流的肥宅，三流的码畜，还请各位大佬多多关照ヾ(･ε･｀*)",
+	introContent:[
+		"陈冰",
+		"江西新余人",
+		"毕业于大连理工大学软件学院",
+		"写过Java和Android，现为一枚渣前端(･ェ･。)",
+		"未来兴趣方向：BlockChain",
+		"目前就职于惠州TCL通讯前端工程师",
+		"兴趣爱好：吃、理财、steam",
+		"是一流的韭菜，二流的肥宅，三流的码畜"
+	],
 	skills:[
 		{title:'Coding programs',content:[
 			{name:"HTML/CSS",val:"90%"},

@@ -234,7 +234,13 @@ section#about .about-section-content .skills .skills-fill .skill-actual{
 	background: rgb(254,205,93);
 	height: 100%;
 	border-radius: .2rem;
+	/*width: 0 !important;
+	transition: width 1s;
+	-webkit-transition:width 1s;*/
 }
+/*section#about .about-section-content .skills .skills-fill .skill-actual:hover{
+	width: 0% !important;
+}*/
 
 section#work{
 	display:flex;
