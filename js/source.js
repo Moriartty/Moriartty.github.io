@@ -31,10 +31,11 @@ let aboutSectionData = {
 	],
 	skills:[
 		{title:'Coding programs',content:[
-			{name:"HTML/CSS",val:"90%"},
+			{name:"HTML5/CSS3",val:"90%"},
 			{name:"JS",val:"80%"},
-			{name:"JAVA",val:"70%"},
-			{name:"Python",val:"50%"}
+			{name:"React技术栈",val:"70%"},
+			{name:"微信小程序",val:"80%"},
+			{name:"NodeJs",val:"60%"}
 		]},
 		{title:"Others",content:[
 			{name:"Linux",val:"60%"},
@@ -45,7 +46,7 @@ let aboutSectionData = {
 };
 let workSectionData = {
 	projectInfoList:[
-		{projName:"TCL通讯OA系统--轻办公",date:"2018.01-2018.07",character:"web前端负责人",
+		{projName:"深圳电大教务系统学生端",date:"2018.07-2018.09",character:"web前端负责人",
 			points:[
 				"负责确定项目完整需求和前端开发使用技术及若干开发文档和用户使用手册编写",
 				"前端采用React、Redux、ES6、Webpack进行项目开发和资源管理，采用ajax和mock.js进行数据交互和测试，使用完整的Ant Design设计风格和组件"
