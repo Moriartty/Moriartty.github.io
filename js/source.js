@@ -73,6 +73,10 @@ let workSectionData = {
 		{url:"./images/slider-3.png",caption:''},
 		{url:"./images/slider-4.png",caption:''},
 		{url:"./images/slider-5.png",caption:''},
+		{url:"https://raw.githubusercontent.com/Moriartty/MeetingX/master/DemoShow/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-09-02%20%E4%B8%8B%E5%8D%883.57.47.png",caption:""},
+		{url:"https://raw.githubusercontent.com/Moriartty/MeetingX/master/DemoShow/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-09-02%20%E4%B8%8B%E5%8D%884.09.27.png",caption:''},
+		{url:'https://raw.githubusercontent.com/Moriartty/MeetingX/master/DemoShow/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-09-02%20%E4%B8%8B%E5%8D%884.10.24.png',caption:''},
+		{url:"https://raw.githubusercontent.com/Moriartty/MeetingX/master/DemoShow/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-09-02%20%E4%B8%8B%E5%8D%884.11.06.png",caption:''},
 	],
 	workshowList:[
 		{category:"Web",id:"web",profit:[
