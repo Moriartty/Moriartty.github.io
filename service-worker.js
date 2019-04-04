@@ -16,6 +16,7 @@ let filesToCache = [
     '/js/source.js',
     '/js/template.min.js',
     '/js/utils.js',
+    'service-worker.js',
     'css/bootstrap.min.css',
     'css/bootstrap-theme.min.css',
     'css/responsive.css',
