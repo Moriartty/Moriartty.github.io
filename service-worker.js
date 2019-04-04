@@ -15,7 +15,7 @@ let filesToCache = [
     '/js/moriarty.js',
     '/js/source.js',
     '/js/template.min.js',
-    '/js/utils.js'
+    '/js/utils.js',
     'css/bootstrap.min.css',
     'css/bootstrap-theme.min.css',
     'css/responsive.css',
