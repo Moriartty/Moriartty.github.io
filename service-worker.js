@@ -15,7 +15,7 @@ let filesToCache = [
     'static/js/awardRotate.js',
     'static/images/delete.png',
     'static/images/start.png',
-    'static/images/logo.jpg'
+    'static/images/logo.jpg',
     'static/css/style.css',
     'static/build/flexible_css.debug.js',
     'static/build/flexible.debug.js',
