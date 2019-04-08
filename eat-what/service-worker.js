@@ -16,11 +16,9 @@ let filesToCache = [
     'images/delete.png',
     'images/start.png',
     'css/style.css',
-    'build/flexible_css.debug.js',
-    'build/flexible.debug.js',
-    'build/makegrid.debug.js',
-    'build/flexible.css',
-    'build/flexible.debug.css'
+    'static/build/flexible_css.debug.js',
+    'static/build/flexible.debug.js',
+    'static/build/makegrid.debug.js'
 ];
 
 self.addEventListener('install', function(e) {
