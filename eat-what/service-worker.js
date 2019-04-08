@@ -11,11 +11,12 @@ let filesToCache = [
     '/index.html',
     'service-worker.js',
     'manifest.json',
-    '/js/jquery.min.js',
-    '/js/awardRotate.js',
-    'images/delete.png',
-    'images/start.png',
-    'css/style.css',
+    'static/js/jquery.min.js',
+    'static/js/awardRotate.js',
+    'static/images/delete.png',
+    'static/images/start.png',
+    'static/images/logo.jpg'
+    'static/css/style.css',
     'static/build/flexible_css.debug.js',
     'static/build/flexible.debug.js',
     'static/build/makegrid.debug.js'
