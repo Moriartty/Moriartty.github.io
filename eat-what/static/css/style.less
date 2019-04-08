@@ -1,0 +1,122 @@
+//定义一个变量和一个mixin
+@baseFontSize: 75;//基于视觉稿横屏尺寸/10得出的基准font-size
+.rem(@name, @px){
+    @{name}: @px / @baseFontSize * 1rem;
+}
+.remInpor(@name, @px){
+    @{name}: @px / @baseFontSize * 1rem !important;
+}
+.fontSize(@px){
+    font-size: @px / @baseFontSize * 1rem;
+}
+.longRem(@name, @a,@b,@c,@d){
+     @{name}: (@a / @baseFontSize) * 1rem (@b / @baseFontSize) * 1rem (@c / @baseFontSize) * 1rem (@d/@baseFontSize) * 1rem;
+}
+.borderWidth(@name, @a, @color){
+    @{name}:(@a / @baseFontSize) * 1rem solid @color;
+}
+//溢出省略号
+.overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+a{text-decoration: none;}
+//清浮动
+.clearfix:after{content: "";display: block;clear: both;}
+.clearfix{*zoom: 1;}
+input,textarea,select{outline: none;}
+//input样式
+.minInput{border: none;outline: none;font-family: "黑体";background: transparent;}
+.border_box{
+    box-sizing:border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box; /* Safari */
+}
+i,e{
+    font-style: normal;
+}
+
+a:link{
+    text-decoration: none;
+}
+.TurntablePage{
+    .TurntableBox{
+        text-align: center;
+        .title{
+            text-align: center;color: #333;.fontSize(36);.rem(padding-bottom,20);.rem(padding-top,20);
+        }
+        .turnplate{
+            .rem(width,620);.rem(height,620);margin: 0 auto;position: relative;
+            canvas{
+                width: 100%;height: 100%;
+            }
+            img{
+                .rem(width,120);
+                position: absolute;left: 50%;.rem(top,212);transform: translateX(-50%);
+            }
+        }
+    }
+    .editBox{
+        text-align: center;
+        a{
+            display: inline-block;.longRem(padding,10,30,10,30);.fontSize(26);
+            border: 1px solid #d2d2d2;.rem(border-radius,8);color: #333;
+            position: relative;z-index: 10000;
+        }
+        .done{
+            border: 1px solid #ff9c22;color: #fff;background: #ff9c22;display: none;
+        }
+    }
+    .warning{
+        text-align: center;.rem(padding-top,30);.rem(padding-bottom,30);.fontSize(26);color: #bfbdbd;
+    }
+    .editContent{
+        .rem(padding-left,28);.rem(padding-right,28);display: none;.rem(padding-bottom,30);
+        h1{
+            .fontSize(28);color: #999;.rem(line-height,60);.rem(padding-top,10);
+        }
+        .title{
+            border-bottom: 1px solid #e2aa2d;position: relative;
+            input{
+                width: 100%;.minInput;
+                color: #333;.fontSize(28);.rem(height,55);
+            }
+            a{
+                display: block;position: absolute;right: 0;.rem(bottom,18);
+                .rem(height,24);.rem(width,24);
+                background: url(../images/delete.png) no-repeat;
+                background-size: 100% 100%;
+                display: none;
+            }
+        }
+        .optionBox{
+            .options{
+                .rem(padding-bottom,10);border-bottom: 1px solid #e2aa2d;position: relative;
+                input{
+                    width: 100%;.minInput;
+                    color: #333;.fontSize(28);.rem(height,55);
+                }
+                a{
+                    display: block;position: absolute;right: 0;.rem(bottom,18);
+                    .rem(height,24);.rem(width,24);
+                    background: url(../images/delete.png) no-repeat;
+                    background-size: 100% 100%;
+                    display: none;
+                }
+            }
+        }
+        .btns{
+            overflow: hidden;
+            a{
+                .rem(padding-top,15);.fontSize(26);color: #FF9C22;display: inline-block;
+            }
+            .addInput{
+                float: left;
+            }
+            .done{
+                float: right;
+            }
+        }
+    }
+}
