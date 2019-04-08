@@ -3,11 +3,11 @@
   "short_name": "Moriarty",
   "description": "Simple Progressive Web App for taking selfies.",
   "icons": [{
-      "src": "images/logo.jpg",
+      "src": "static/images/logo.jpg",
       "type": "image/jpg",
       "sizes": "72x72"
     }, {
-      "src": "images/logo.jpg",
+      "src": "static/images/logo.jpg",
       "type": "image/jpg",
       "sizes": "144x144 256x256" 
     }],
