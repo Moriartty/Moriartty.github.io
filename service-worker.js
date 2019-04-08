@@ -7,18 +7,19 @@ if('serviceWorker' in navigator) {
 }
 const cacheName = 'eat-what';
 let filesToCache = [
-    'Eat-What/',
-    'Eat-What/index.html',
-    'Eat-What/manifest.json',
-    'Eat-What/static/js/jquery.min.js',
-    'Eat-What/static/js/awardRotate.js',
-    'Eat-What/static/images/delete.png',
-    'Eat-What/static/images/start.png',
-    'Eat-What/static/images/logo.jpg'
-    'Eat-What/static/css/style.css',
-    'Eat-What/static/build/flexible_css.debug.js',
-    'Eat-What/static/build/flexible.debug.js',
-    'Eat-What/static/build/makegrid.debug.js'
+    '/',
+    '/index.html',
+    // 'service-worker.js',
+    'manifest.json',
+    'static/js/jquery.min.js',
+    'static/js/awardRotate.js',
+    'static/images/delete.png',
+    'static/images/start.png',
+    'static/images/logo.jpg'
+    'static/css/style.css',
+    'static/build/flexible_css.debug.js',
+    'static/build/flexible.debug.js',
+    'static/build/makegrid.debug.js'
 ];
 
 self.addEventListener('install', function(e) {
