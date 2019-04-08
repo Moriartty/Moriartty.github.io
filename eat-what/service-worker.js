@@ -5,21 +5,21 @@ if('serviceWorker' in navigator) {
             console.log('Service Worker Registered');
         });
 }
-const cacheName = 'moriartty';
+const cacheName = 'eat-what';
 let filesToCache = [
     '/',
     '/index.html',
     'service-worker.js',
     'manifest.json',
-    'static/js/jquery.min.js',
-    'static/js/awardRotate.js',
-    'static/images/delete.png',
-    'static/images/start.png',
-    'static/images/logo.jpg'
-    'static/css/style.css',
-    'static/build/flexible_css.debug.js',
-    'static/build/flexible.debug.js',
-    'static/build/makegrid.debug.js'
+    // 'static/js/jquery.min.js',
+    // 'static/js/awardRotate.js',
+    // 'static/images/delete.png',
+    // 'static/images/start.png',
+    // 'static/images/logo.jpg'
+    // 'static/css/style.css',
+    // 'static/build/flexible_css.debug.js',
+    // 'static/build/flexible.debug.js',
+    // 'static/build/makegrid.debug.js'
 ];
 
 self.addEventListener('install', function(e) {
