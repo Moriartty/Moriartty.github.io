@@ -1,4 +1,4 @@
-<html style="background: #fffff5;">
+<html>
 	<head>
 	    <meta charset="utf-8" />
 	    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
@@ -7,7 +7,7 @@
 	    <meta content="telephone=no,email=no" name="format-detection" />
 	    <meta content="maximum-dpr=2" name="flexible" />
 	    <meta content="modeName=750-12" name="grid" />
-		<title>今天吃啥？</title>
+		<title>今天宝贝想吃啥(๑•̀ㅂ•́)و✧</title>
 		<link rel="manifest" href="manifest.json">
 		<script type="text/javascript" src="service-worker.js"></script>
 		<script src="static/build/flexible_css.debug.js"></script>
@@ -21,7 +21,7 @@
 	<body>
 		<div class="TurntablePage" style="padding-top: 50px;">
 			<div class="TurntableBox" style="display: none;">
-				<div class="title allTitle">今天吃啥？</div>
+				<div class="title allTitle">今天宝贝想吃啥(๑•̀ㅂ•́)و✧</div>
 				<div class="turnplate">
 					<canvas class="item" id="wheelcanvas" width="422px" height="422px"></canvas>
 					<img class="pointer" src="static/images/start.png"/>
@@ -32,7 +32,7 @@
 				<a href="javascript:;" class="editBtn2">直接开始</a>
 			</div>
 			<div class="warning">
-				选择困难症者的助选神器。<br/>让选择变成娱乐。<br/>本游戏仅供娱乐，对结果不承担任何责任
+				小猪是不是又不知道吃什么（○｀ 3′○）<br/>嫌麻烦的话就用老公给你准备好的选项吧。<br/>或者你自己自定义也行哦≡ω≡
 			</div>
 			<div class="editContent">
 				<h1>请输入主题</h1>
@@ -52,7 +52,7 @@
 			</div>
 		</div>
 		<script type="text/javascript">
-			var defaultVal = ["麻辣香锅", "凉拌菜", "炸鸡",'粥','酱香饼','麻辣烫','鸡蛋灌饼'];
+			var defaultVal = ["麻辣香锅", "凉拌菜", "汉堡/炸鸡",'粥','酱香饼/馅饼','麻辣烫','米线/螺蛳粉','木桶饭/煲仔饭'];
 			//页面所有元素加载完毕后执行drawRouletteWheel()方法对转盘进行渲染
 			var turnplate={
 					restaraunts:[],				//大转盘奖品名称
@@ -64,15 +64,16 @@
 					bRotate:false				//false:停止;ture:旋转
 			};
 			//动态添加大转盘的奖品与奖品区域背景颜色
-			if(!window.localStorage){
-				turnplate.restaraunts = defaultVal
-	        }else{
-	            //主逻辑业务
-	            var storage = window.localStorage;
-	            if(!storage['restaraunts'])
-	            	storage['restaraunts'] = defaultVal
-            	turnplate.restaraunts = [].concat(storage['restaraunts'].split(','));
-	        }
+			// if(!window.localStorage){
+			// 	turnplate.restaraunts = defaultVal
+	  //       }else{
+	  //           //主逻辑业务
+	  //           var storage = window.localStorage;
+	  //           if(!storage['restaraunts'])
+	  //           	storage['restaraunts'] = defaultVal
+   //          	turnplate.restaraunts = [].concat(storage['restaraunts'].split(','));
+	  //       }
+	  		turnplate.restaraunts = defaultVal;
 			colorsArr = ["#FFF4D6", "#FFFFFF",'#fff0c8'];
 			returnColor();
 			function returnColor(){
