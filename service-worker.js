@@ -7,6 +7,7 @@ if('serviceWorker' in navigator) {
 }
 const cacheName = 'eat-what';
 let filesToCache = [
+    'eat-what/index.html'
     // '/',
     // '/index.html',
     // // 'service-worker.js',
