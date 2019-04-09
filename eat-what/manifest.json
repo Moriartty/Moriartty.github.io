@@ -1,6 +1,6 @@
 {
-  "name": "Moriarty",
-  "short_name": "Moriarty",
+  "name": "eat-what",
+  "short_name": "eat-what",
   "description": "Simple Progressive Web App for taking selfies.",
   "icons": [{
       "src": "static/images/logo.png",

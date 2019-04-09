@@ -12,13 +12,13 @@ let filesToCache = [
     'eat-what/manifest.json',
     'eat-what/static/js/jquery.min.js',
     'eat-what/static/js/awardRotate.js',
-    // 'eat-what/static/images/delete.png',
-    // 'eat-what/static/images/start.png',
-    // 'eat-what/static/images/logo.jpg',
-    // 'eat-what/static/css/style.css',
-    // 'eat-what/static/build/flexible_css.debug.js',
-    // 'eat-what/static/build/flexible.debug.js',
-    // 'eat-what/static/build/makegrid.debug.js'
+    'eat-what/static/images/delete.png',
+    'eat-what/static/images/start.png',
+    'eat-what/static/images/logo.png',
+    'eat-what/static/css/style.css',
+    'eat-what/static/build/flexible_css.debug.js',
+    'eat-what/static/build/flexible.debug.js',
+    'eat-what/static/build/makegrid.debug.js'
 ];
 
 self.addEventListener('install', function(e) {
