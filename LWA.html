@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<div id="amazon-root">
+    <a href id="LoginWithAmazon">
+        <img  border="0" alt="Login with Amazon"
+            src="https://images-na.ssl-images-amazon.com/images/G/01/lwa/btnLWA_gold_156x32.png"
+            width="156" height="32" />
+    </a>
+
+    <button id='skill'>put</button>
+
+</div>
+<script src="https://cdn.bootcss.com/jquery/3.4.0/jquery.min.js"></script>
+<script type="text/javascript">
+    var token; 
+    window.onAmazonLoginReady = function() {
+        var clientId = 'amzn1.application-oa2-client.85bdf51a6f20444c8e2c0d1cb35d44fc';
+        amazon.Login.setClientId(clientId);
+    };
+    (function(d) {
+      var a = d.createElement('script'); a.type = 'text/javascript';
+      a.async = true; a.id = 'amazon-login-sdk';
+      a.src = 'https://assets.loginwithamazon.com/sdk/na/login1.js';
+      d.getElementById('amazon-root').appendChild(a);
+    })(document);
+
+    document.getElementById('LoginWithAmazon').onclick = function() {
+        setTimeout(window.doLogin, 1);
+            return false;
+        };
+
+        window.doLogin = function() {
+            options = {};
+            options.scope = 'profile';
+            options.response_type='token';
+            amazon.Login.authorize(options, function(response) {
+            if ( response.error ) {
+                alert('oauth error ' + response.error);
+                return;
+            }
+            token = response.access_token;
+            // console.log('access_token',token);
+            amazon.Login.retrieveProfile(response.access_token, function(response) {
+                alert(JSON.stringify(response));
+            });
+        });
+    };
+
+    document.getElementById('skill').onclick = function() {
+        console.log('token',token);
+        var skillId = 'amzn1.ask.skill.a4d1df0d-cff1-4d2a-b32c-3d95c6b3aeee';
+        var url = "https://api.amazonalexa.com/v1/skills/"+skillId+"/stages/live/enablement";
+        // var url = 'https://api.amazonalexa.com/v1/skills/'+skillId+'/credentials'
+        $.ajax({
+              url: url,
+              type: "POST",
+              // data:{},
+              headers: { 
+                    'Content-Type': 'application/json',
+                     'Accept': 'application/json',
+                     "Authorization":token,
+                    "X-HTTP-Method-Override": "PUT" 
+              }, 
+              // beforeSend: function(xhr) {
+              //       xhr.setRequestHeader("Authorization", token);
+              //   }
+        })
+    }
+
+</script>
+</body>
+</html>
