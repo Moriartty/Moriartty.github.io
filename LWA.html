@@ -53,22 +53,44 @@
     document.getElementById('skill').onclick = function() {
         console.log('token',token);
         var skillId = 'amzn1.ask.skill.a4d1df0d-cff1-4d2a-b32c-3d95c6b3aeee';
-        var url = "https://api.amazonalexa.com/v1/skills/"+skillId+"/stages/live/enablement";
-        // var url = 'https://api.amazonalexa.com/v1/skills/'+skillId+'/credentials'
-        $.ajax({
-              url: url,
-              type: "POST",
-              // data:{},
-              headers: { 
-                    'Content-Type': 'application/json',
-                     'Accept': 'application/json',
-                     "Authorization":token,
-                    "X-HTTP-Method-Override": "PUT" 
-              }, 
-              // beforeSend: function(xhr) {
-              //       xhr.setRequestHeader("Authorization", token);
-              //   }
-        })
+        // var url = "https://api.amazonalexa.com/v1/skills/"+skillId+"/stages/live/enablement";
+        var url = 'https://api.amazonalexa.com/v1/skills/'+skillId+'/credentials'
+        // var url = 'https://www.test-teye.com/validation/test/appbaseinfo'
+        // $.ajax({
+        //       url: url,
+        //       type: "GET",
+        //       // data:{},
+        //       headers: { 
+        //             'Content-Type': 'application/json',
+        //              'Accept': 'application/json',
+        //             //  "Authorization":token,
+        //             // "X-HTTP-Method-Override": "PUT" 
+        //       }, 
+        //       // beforeSend: function(xhr) {
+        //       //       xhr.setRequestHeader("Authorization", token);
+        //       //   }
+        // })
+        postData(url, {})
+          .then(data => console.log(data)) // JSON from `response.json()` call
+          .catch(error => console.error(error))
+    }
+    function postData(url, data) {
+      // Default options are marked with *
+      return fetch(url, {
+        // body: JSON.stringify(data), // must match 'Content-Type' header
+        cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+        //credentials: 'same-origin', // include, same-origin, *omit
+        headers: {
+          'user-agent': 'Mozilla/4.0 MDN Example',
+          'content-type': 'application/json',
+           "Authorization":token,
+        },
+        method: 'GET', // *GET, POST, PUT, DELETE, etc.
+        mode: 'cors', // no-cors, cors, *same-origin
+        redirect: 'follow', // manual, *follow, error
+        referrer: 'no-referrer', // *client, no-referrer
+      })
+      .then(response => response.json()) // parses response to JSON
     }
 
 </script>
