@@ -75,7 +75,6 @@
     ctx.globalAlpha = 0.1;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     ctx.restore();
-
     var newTime = new Date();
     if (newTime - lastTime > 200 + (window.innerHeight - 767) / 2) {
       var random = Math.random() * 100 > 2 ? true : false;
@@ -86,6 +85,7 @@
         bigbooms.push(bigboom)
       }
       else {
+        console.log(increment())
         var bigboom = new Boom(getRandom(canvas.width / 3, canvas.width * 2 / 3), 2, "#FFF", {
           x: canvas.width / 2,
           y: 200
