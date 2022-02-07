@@ -27,9 +27,9 @@
 <div class="city"><img src="city.png" alt=""/></div>
 <img src="moon.png" alt="" id="moon" style="visibility: hidden;"/>
 <div style="display:none">
-  <div class="shape">2022新年快乐</div>
-  <div class="shape">虎年大吉</div>
-  <div class="shape">ヾ(^∀^)ﾉ</div>
+  <div class="shape">1</div>
+  <div class="shape">2</div>
+  <div class="shape">3</div>
 </div>
 <audio src="boom.mp3" preload="auto"></audio>
 <audio src="boom.mp3" preload="auto"></audio>
@@ -76,8 +76,8 @@
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     ctx.restore();
     var newTime = new Date();
-    if (newTime - lastTime > 100 + (window.innerHeight - 767) / 2) {
-      var random = Math.random() * 100 > 2 ? true : false;
+    if (newTime - lastTime > 200 + (window.innerHeight - 767) / 2) {
+      var random = Math.random() * 10 > 2 ? true : false;
       var x = getRandom(canvas.width / 5, canvas.width * 4 / 5);
       var y = getRandom(50, 200);
       if (random) {
