@@ -61,12 +61,12 @@
   }
   function loop(max){
     var i = 0;
-    function increment(){
+    return function(){
       i = i+1>=max?0:++i;
       return i;
     }
-    return increment;
   }
+  var increment = loop(document.querySelectorAll(".shape").length);
 
   var lastTime;
   function animate() {
@@ -90,7 +90,7 @@
           x: canvas.width / 2,
           y: 200
         }, document.querySelectorAll(".shape")[
-          loop(document.querySelectorAll(".shape").length)
+          increment()
           // parseInt(getRandom(0, document.querySelectorAll(".shape").length))
         ]);
         bigbooms.push(bigboom)
