@@ -60,9 +60,9 @@
     animate();
   }
   function loop(max){
-    var i = 0;
+    var i = -1;
     return function(){
-      i = i+1>=max?0:i++;
+      i = i+1>=max?0:++i;
       return i;
     }
   }
