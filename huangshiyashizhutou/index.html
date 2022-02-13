@@ -20,16 +20,21 @@
       width: 100%;
     }
   </style>
-  <title>送给小猪的烟花晚会</title>
+  <title>送给小猪的永恒的烟花晚会</title>
 </head>
 <body onselectstart="return false">
 <canvas id='cas' style="background-color:rgba(0,5,24,1)">浏览器不支持canvas</canvas>
 <div class="city"><img src="city.png" alt=""/></div>
 <img src="moon.png" alt="" id="moon" style="visibility: hidden;"/>
 <div style="display:none">
-  <div class="shape">祝小黄</div>
+  <div class="shape">愿亲爱的小黄🐟</div>
   <div class="shape">新的一年</div>
-  <div class="shape">白白胖胖</div>
+  <div class="shape">开开心心</div>
+  <div class="shape">漂漂亮亮</div>
+  <div class="shape">和你一起走过的日子</div>
+  <div class="shape">温馨而美好</div>
+  <div class="shape">祝我们以后的日子</div>
+  <div class="shape">也有数不尽的烟花和浪漫</div>
 </div>
 <audio src="boom.mp3" preload="auto"></audio>
 <audio src="boom.mp3" preload="auto"></audio>
@@ -77,7 +82,7 @@
     ctx.restore();
     var newTime = new Date();
     if (newTime - lastTime > 200 + (window.innerHeight - 767) / 2) {
-      var random = Math.random() * 80 > 2 ? true : false;
+      var random = Math.random() * 85 > 2 ? true : false;
       var x = getRandom(canvas.width / 5, canvas.width * 4 / 5);
       var y = getRandom(50, 200);
       if (random) {
@@ -285,7 +290,7 @@
     else {
       var text = ele.innerHTML;
       context.save();
-      var fontSize = 150;
+      var fontSize = 130;
       context.font = fontSize + "px 宋体 bold";
       context.textAlign = "center";
       context.textBaseline = "middle";
