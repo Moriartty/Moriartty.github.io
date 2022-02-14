@@ -54,7 +54,7 @@
   ocas.width = canvas.width = window.innerWidth;
   ocas.height = canvas.height = window.innerHeight;
   var bigbooms = [];
-  document.body.focus();
+  setTimeout(()=>document.body.focus(),10)
   window.onload = function() {
     initAnimate()
   }
