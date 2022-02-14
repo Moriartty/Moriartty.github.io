@@ -20,7 +20,7 @@
       width: 100%;
     }
   </style>
-  <title>送给小猪的永恒的烟花晚会</title>
+  <title>送给小猪的烟花晚会</title>
 </head>
 <body onselectstart="return false">
 <canvas id='cas' style="background-color:rgba(0,5,24,1)">浏览器不支持canvas</canvas>
@@ -83,7 +83,7 @@
     ctx.restore();
     var newTime = new Date();
     if (newTime - lastTime > 200 + (window.innerHeight - 767) / 2) {
-      var random = Math.random() * 75 > 2 ? true : false;
+      var random = Math.random() * 70 > 2 ? true : false;
       var x = getRandom(canvas.width / 5, canvas.width * 4 / 5);
       var y = getRandom(50, 200);
       if (random) {
